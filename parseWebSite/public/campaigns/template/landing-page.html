@@ -1,0 +1,156 @@
+
+<div ng-controller="LP">
+	<head>
+		<meta property="og:type" content="article"/>
+		<meta property="og:title" content="אחד מי יודע - יום חדש, תפוח חדש"/>
+		<meta property="og:description" content="{{itemTitle}}"/>
+		<meta property="og:site_name" content="אחד מי יודע"/>
+		<meta property="og:url" content="http://www.ynet.co.il/articles/0,7340,L-4616534,00.html"/>
+		<meta property="og:image" content="{{itemBackgroundImage}}"/>
+	</head>
+	<a href="#list" style="color:transparent">.</a>
+	
+	<div class="text-center">
+		<img id="itemImage" crossorigin="anonymous" src="{{itemBackgroundImage}}" class="responsive-image img-rounded fade.in">	 
+	</div>
+	<h1 class="page-header" dir="rtl">{{itemTitle}}</h1>	
+	<div class="text-right page-header">
+		<h3  dir="rtl">{{itemBody}}</h3>
+	</div>
+	
+    <div class="text-center">
+      <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#continueToOrder" id="buyNowBtn">
+        Order Now!
+      </button>
+    </div>
+  <!--<section>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Deal Description</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select class="form-control" id="dealSelect" ng-model="deals[$index]" ng-options="deal.name for deal in deals">
+                <option value="">-- Choose Deal --</option>
+              </select>
+            </td>
+            <td>
+              <div class="input-group spinner">
+                <input type="text" class="form-control" value="{{amount}}" id="amount" disabled>
+                <div class="input-group-btn-vertical">
+                  <button class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+                  <button class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+                </div>
+              </div>
+            </td>
+            <td ng-if="deals[$index].cost && discountApplied"><del>{{deals[$index].cost}}$</del> <b>{{(deals[$index].cost * (1 - deals[$index].discount/100)).toFixed()}}$</b></td>
+            <td ng-if="deals[$index].cost && !discountApplied">{{deals[$index].cost}}$ </td>
+            <td ng-if="deals[$index].cost && discountApplied"><del>{{totalPrice(deals[$index].cost, amount)}}$</del> <b>{{totalPrice(deals[$index].cost * (1 - deals[$index].discount/100), amount).toFixed()}}$</b></td>
+            <td ng-if="deals[$index].cost && !discountApplied">{{totalPrice(deals[$index].cost, amount)}}$ </td>
+          </tr>
+        </tbody>
+      </table>
+      <div ng-if="total && discountApplied">Total: <del>${{totalPrice(deals[$index].cost, amount)}}</del> <b>${{totalPrice(deals[$index].cost * (1 - deals[$index].discount/100), amount).toFixed()}}</b></div>
+      <div ng-if="total && !discountApplied">Total: <b>{{totalPrice(deals[$index].cost, amount)}} $</b></div>
+	  <div ng-if="!discountApplied && total ">Members can save <b>{{deals[$index].discount}}%</b> off and pay only <b>${{totalPrice(deals[$index].cost * (1 - deals[$index].discount/100), amount).toFixed()}}</b> (instead of ${{totalPrice(deals[$index].cost, amount)}})</div>      
+	  <div ngShow="discountApplied" id="discountAppliedMessage" class="message-successful-discount-apply"></div>
+    </section>
+    <hr/>
+    
+    <br/>
+    <div ng-if="!discountApplied" id="promoter-input">
+      To enjoy your special member price apply your code - #<input type="text" value="{{promoterName}}" id="promoterId"/><button style="margin-left:10px;" class="btn btn-success" ng-click="apply(deals[$index].discount)">Apply</button>
+    </div>
+    
+    <br/>
+    <br/>-->
+	
+    
+	<!--
+    <div class="modal fade" id="continueToOrder">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" ng-if="!selectedDeal()">Choose Deal - Step 1</h4>
+            <h4 class="modal-title" ng-if="!userStatus() && selectedDeal()">Login / Register - Step 2</h4>
+            <h4 class="modal-title" ng-if="userStatus() && selectedDeal()">Pay us - Step 3</h4>
+          </div>
+          <div class="modal-body" ng-if="!selectedDeal()">
+            Please select Deal to continue!
+          </div>
+          <div class="modal-body" ng-if="!userStatus() && selectedDeal()">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Sign in with account</button>
+            <br/>
+              <div class="text-center">--------- or ---------</div>
+            <br/>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Register</button>
+            <br/>
+              <div class="text-center">--------- or ---------</div>
+            <br/>
+            <a class="btn btn-block btn-social btn-lg btn-facebook" onclick="FBLogin()">
+              <i class="fa fa-facebook"></i> <div class="text-center">Sign in with Facebook</div>
+            </a>
+          </div>
+          <div class="modal-body" ng-if="userStatus() && selectedDeal()">
+                <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj" id="payment-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" /><input name="_method" type="hidden" value="PUT" /><input name="authenticity_token" type="hidden" value="qLZ9cScer7ZxqulsUWazw4x3cSEzv899SP/7ThPCOV8=" /></div>
+                  <div class='form-row'>
+                    <div class='col-xs-12 form-group required'>
+                      <label class='control-label'>Name on Card</label>
+                      <input class='form-control' size='4' type='text'>
+                    </div>
+                  </div>
+                  <div class='form-row'>
+                    <div class='col-xs-12 form-group card required'>
+                      <label class='control-label'>Card Number</label>
+                      <input autocomplete='off' class='form-control card-number' size='20' type='text'>
+                    </div>
+                  </div>
+                  <div class='form-row'>
+                    <div class='col-xs-4 form-group cvc required'>
+                      <label class='control-label'>CVC</label>
+                      <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
+                    </div>
+                    <div class='col-xs-4 form-group expiration required'>
+                      <label class='control-label'>Expiration</label>
+                      <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                    </div>
+                    <div class='col-xs-4 form-group expiration required'>
+                      <label class='control-label'> </label>
+                      <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                    </div>
+                  </div>
+                  <div class='form-row'>
+                    <div class='col-md-12'>
+                      <div class='form-control total btn btn-info'>
+                        <div ng-if="total">Total: <b>{{total}} $</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='form-row'>
+                    <div class='col-md-12 error form-group hide'>
+                      <div class='alert-danger alert'>
+                        Please correct the errors and try again.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary submit-button" ng-click="pay()" ng-if="selectedDeal()">Pay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+
+</div>

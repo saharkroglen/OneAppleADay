@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp" >
+
+        <ImageView
+            android:id="@android:id/background"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sliding_header_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" 
+            android:text="@string/txt_header_message"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/header_title_text_shadow"
+        android:orientation="horizontal" >
+
+        <!--
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|end"
+            android:gravity="right"
+            android:layout_weight="6"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtHeaderTitle"
+                style="@style/Header.TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Title" />
+            <TextView
+                android:id="@+id/txtHeaderSubtitle"
+                style="@style/Header.SubTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Subtitle" 
+                android:visibility="gone"/>
+        </LinearLayout>
+        -->
+
+
+        <!--
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/button0"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@drawable/ic_action_tick"
+                app:cb_color="#ffCC00" 
+                android:layout_marginRight="20dp"/>
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/button00"
+                android:layout_width="40dp"
+                android:layout_height="40dip"
+                android:src="@drawable/ic_action_tick"
+                app:cb_color="#00CC00" />
+        </LinearLayout>
+        -->
+    </LinearLayout>
+
+    <View
+        android:id="@android:id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:actionBarSize"
+        android:background="@drawable/header_ab_shadow" />
+
+</FrameLayout>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/> 
+  <meta property="fb:app_id" content="344699962384739"/>  
+		  <meta property="og:title" content="אחד מי יודע - יום חדש, תפוח חדש"/>
+		  <meta property="og:site_name" content="אחד מי יודע"/>
+		  <meta property="og:url" content="<%= itemUrlParam %>#/">
+		  <meta property="og:description" content="<%=itemTitleParam%>">
+		  <meta property="og:image" content="<%=itemImageUrlParam%>"/>
+
+  <title>אחד מי יודע</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/doc.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript" src="js/connect.js"></script>
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-45697057-3']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	
+	
+</head>
+<body>
+	
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1524138377851580',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  <script>
+		_gaq.push(['_trackEvent','items_events', 'landing_page_view', getQueryParams('iid')]);//iid stands for item id		
+  </script>
+  
+  <div class="container wrapPage">
+  <div
+	  class="fb-like"
+	  data-share="true"
+	  data-width="450"
+	  data-show-faces="true">
+	</div>
+    <ng-view/>
+  </div>
+  
+  <!-- scripts -->
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="lib/jx.min.js"></script>
+  <script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+	<script src="lib/angular-resource.js"></script>
+	<script src="lib/jquery-1.11.0.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  
+	<script src="js/app.js"></script>
+  <script src="js/service.js"></script>
+	<script src="js/controllers.js"></script>
+  <script type="text/javascript">
+    app.initialize();
+  </script>
+ 
+</body>
+</html>

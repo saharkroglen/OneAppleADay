@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "OnceADay": {
+            "applicationId": "gFWZRPLmGg1MRH8TeCNAg4erKgcWrk5OO4uqyJ67", 
+            "masterKey": "1qsNehJwIRUGUMl0ItqzwsSJZ92Bm7iNgCVwLdbR"
+        }, 
+        "_default": {
+            "link": "OnceADay"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.3"
+    }
+}

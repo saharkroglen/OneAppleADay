@@ -1,0 +1,9 @@
+<div ng-controller="AllCampaigns">
+  
+  <h1>List Of All Campaigns</h1>
+  <ul>
+    <li ng-repeat="camp in camps">
+      <a href="http://wepromote.parseapp.com/campaigns/?cid={{camp.id}}">CampaignId: {{camp.attributes.CampaignId}} promoted by {{camp.attributes.PromoterId}}</a>
+    </li>
+  </ul>
+</div>

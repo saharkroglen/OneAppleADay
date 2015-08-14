@@ -1,0 +1,26 @@
+
+<div ng-controller="LP">	
+	
+	<a href="#list" style="color:transparent">.</a>	
+	<div class="icon-strip">
+		<img id="icon" height="40px" crossorigin="anonymous" src="img/ic_launcher.png" class="fade.in">אחד מי יודע
+	</div>
+	<div class="text-center">
+		<img id="itemImage" crossorigin="anonymous" src="{{itemBackgroundImage}}" class="responsive-image img-rounded fade.in">	 
+	</div>
+	<h3 class="page-header" dir="rtl">{{itemTitle}}</h3>	
+	<div class="text-right page-header">
+		<h4  dir="rtl">{{itemBody}}</h4>
+	</div>
+	
+    <div class="text-center">
+      <button class="btn btn-success btn-info" /*ng-click="getapp()"*/ onclick="location.href='https://play.google.com/store/apps/details?id=com.shoogisoft.oneappleaday&referrer='+getQueryParams('iid')" id="btnGetApp"> <span dir="rtl" style="word-wrap: break-word;">רוצה לקבל תפוחים נוספים?<br/>
+רוצה לדעת כמה מגניבים כמוך ידעו לענות?<br/>
+רוצה לצחוק בקול רם על אלה שלא ידעו?</span><br/>
+<span ><img height="40px" src="img/google-play-icon.png"></span>
+     הורד מהחנות
+	 
+      </button>
+    </div>	
+</div>
+ 

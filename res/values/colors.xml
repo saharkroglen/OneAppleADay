@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="button_blue">#7ACEFF</color>
+    <color name="button_blue_pressed">#BEE4F5</color>
+    
+    <color name="button_grey">#E6E7E7</color>
+    <color name="button_grey_pressed">#C2C9C2</color>
+    
+    <color name="button_vote">#4D0080C0</color>
+    <color name="button_vote_pressed">#4D02ADFF</color>
+    <color name="button_vote_border">#1CA4CA</color>
+    
+    
+    <color name="button_green_pressed">#80FF80</color>
+    <color name="button_green">#009E0F</color>
+    
+    <color name="header_end_color">#2BABC7</color>
+    <color name="header_start_color">#00ffff</color>
+    
+    <color name="button_blue_facebook">#355896</color>
+    <color name="button_blue_facebook_pressed">#5B97FF</color>
+    
+    
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    
+    <color name="promoter_id_text_color">#00FF40</color>
+    
+    
+    <!-- Action bar background -->
+    <color name="actionbar_bg">#057ED0</color>
+    
+    
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">אחד מי יודע</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">xxxxx</string>
+    <string name="title_activity_main_activity1">MainActivity1</string>
+    <string name="title_home">ברוכים הבאים...</string>
+    <string name="btn_snooze">תזכיר לי אח"כ</string>
+    <string name="btn_open">פתח</string>
+    <string name="notification_title">יום חדש, תפוח חדש! </string>
+    
+    <string name="txt_tomorrow">מחר</string>
+    <string name="txt_day_after_tomorrow">מחרתיים</string>
+    <string name="txt_2days_after_tomorrow">בעוד שלושה ימים</string>
+    
+    <string name="notification_click_to_read_more">לחץ כאן כדי לגלות...</string>
+    
+    <string name="btn_knew">ידעתי !</string>
+    <string name="btn_didnt_know">וואללה? לא ידעתי</string>
+    <string name="btn_share_side_button">שתף</string>
+    
+    <string name="txt_sharing_message">אחד מי יודע - יום חדש, תפוח חדש:\n</string>
+    <string name="txt_welcome_first_message">התפוח הראשון מגיע ממש בעוד כמה שניות...</string>
+    <string name="txt_header_message">ברוך הבא ל\"אחד מי יודע\" !\nבכל יום נפתיע אותך עם תפוח חדש.</string>
+        
+    <string name="txt_loading">בטעינה...</string>
+    <string name="txt_facebook_title">Facebook</string>
+    <string name="txt_whatsapp_title">Whatsapp</string>
+    <string name="txt_more_title">More</string>
+    <string name="txt_share_using_title">Share Using</string>
+    
+    <string name="toast_whatsapp_not_installed">אפליקציית ווטסאפ אינה מותקנת\nאנא התקן ונסה שוב</string>
+   
+    
+    
+    
+    
+    
+
+</resources>
